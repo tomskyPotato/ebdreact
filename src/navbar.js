@@ -6,7 +6,7 @@ class Navi extends Component {
     render(){
       return(
         <div className="flex-item flex-item-top">
-            <Navbar inverse collapseOnSelect >{/*fluid="true">*/}
+            <Navbar inverse collapseOnSelect fluid="true">
             <Navbar.Header>
                 <Navbar.Brand>
                 <a href="">Nie wieder rumspielen: Unten offen. Bleibt!</a>

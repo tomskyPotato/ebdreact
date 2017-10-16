@@ -21,9 +21,7 @@ handleClick = () => {
       <div className="App">
         <Navi />
         <Body />
-        <ButtonArea name="Thomas" handleClick={this.handleClick} />
-        <ButtonArea name="Lilly" temperature={this.state.temperature}/>
-        <p>{this.state.temperature}</p>
+        <ButtonArea name="Thomas" handleClick={this.handleClick} temperature={this.state.temperature}/>
       </div>
     );
   }

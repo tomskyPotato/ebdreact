@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
-import PropTypes from 'prop-types';
 
 class ButtonArea extends Component {
   constructor(props){
