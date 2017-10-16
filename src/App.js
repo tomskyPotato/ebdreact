@@ -7,12 +7,13 @@ import ButtonArea from './buttonarea.js';
 class App extends Component {
 constructor(props){
   super(props);
-  this.state = {temperature: 123};
+  this.state = {temperature: 0};
 }
 
 handleClick = () => {
-  this.state.temperature += 1;
-  this.setState({temperature: 456});
+  let n = this.state.temperature;
+  n += 1;
+  this.setState({temperature: n});
 }
 
   render() {
