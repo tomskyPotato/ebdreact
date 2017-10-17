@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
 
+const divStyle = {
+  textAlign: 'center',
+}
+
 class ButtonArea extends Component {
   constructor(props){
     super(props);
@@ -19,12 +23,12 @@ class ButtonArea extends Component {
 
   render(){
     return(
-      <div className="flex-item flex-item-bottom">
-        <br/>
-        <br/>
-        <p>Clicked: {this.state.clicked}</p>
-        <Button onClick={this.handleClick}>
-          {this.props.name} temperature: {this.props.temperature}
+      <div style={divStyle}>
+        <Button href="./mathilda">zurück
+        </Button>
+        <Button href="./mathilda">home
+        </Button>
+        <Button href="./mathilda">weiter
         </Button>
       </div>
     );
