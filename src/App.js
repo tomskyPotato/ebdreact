@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
 import Navi from './navbar.js';
 import Body from './body.js';
@@ -11,9 +11,9 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-            <Navi />
-            <Body />
-            <ButtonArea />
+          <Route path='/mathilda' exact component={Navi} />
+          <Body />
+          <Route path='/mathilda' exact component={ButtonArea} />
         </div>
       </BrowserRouter>
     );

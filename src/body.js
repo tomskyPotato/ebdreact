@@ -10,31 +10,25 @@ class Body extends Component {
     render(){
       return(
           <div>
-            <Route path='/' component={home} />
-            <Route path='/welcome' component={welcome} />
+            <Route path='/' exact component={welcome} />
             <Route path='/mathilda' component={mathilda} />
           </div>
       );
     }
   }
-  
-const home =() => 
-  <Jumbotron style={divStyle}>
-    <p><Button bsStyle="primary" href="./welcome">Infos</Button></p>
-  </Jumbotron>
 
 const welcome =() => 
   <Jumbotron style={divStyle}>
     <h1>Willkommen bei EBD</h1>
     <p>Willkommen beim Entwicklungsbeobachtungs und Dokumentationstool!</p>
-    <p><Button bsStyle="primary" href="./mathilda">Infos</Button></p>
+    <p><Button bsStyle="primary" href="./mathilda">Start</Button></p>
   </Jumbotron>
 
 const mathilda =() =>
   <Jumbotron style={divStyle}>
     <h1>Willkommen bei Mathilda und Lilly</h1>
     <p>Willkommen beim Entwicklungsbeobachtungs und Dokumentationstool!</p>
-    <p><Button bsStyle="primary" href="./welcome">Infos</Button></p>
+    <p><Button bsStyle="primary" href="./">Home</Button></p>
   </Jumbotron>
 
   export default Body;
