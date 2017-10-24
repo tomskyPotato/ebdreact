@@ -21,7 +21,9 @@ const welcome =() =>
   <Jumbotron style={divStyle}>
     <h1>Willkommen bei EBD</h1>
     <p>Willkommen beim Entwicklungsbeobachtungs und Dokumentationstool!</p>
-    <p><Button bsStyle="primary" href="./mathilda">Start</Button></p>
+    <br/>
+    <p><Button bsStyle="primary" href="./mathilda">Anmelden</Button></p>
+    <p><Button bsStyle="primary" href="./mathilda">Registrieren</Button></p>
   </Jumbotron>
 
 const mathilda =() =>
