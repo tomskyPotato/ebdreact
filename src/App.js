@@ -1,48 +1,23 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
-import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import './styles/App.css';
+import Welcome from './welcome.js';
 import loginClass from './login.js';
-import Navi from './navbar.js';
-import ButtonArea from './buttonarea.js';
-import { Button, Jumbotron } from 'react-bootstrap';
-
-const divStyle = {
-  textAlign: 'center',
-}
+import Ebd from './ebd.js';
 
 class App extends Component {
 
   render() {
     return (
-      <BrowserRouter>
+      <Router>
         <div className="App">
-          <Route path='/' exact component={welcome} />
-          <Route path='/mathildaPath' component={Navi} />
-          <Route path='/mathildaPath' component={mathilda} />
-          <Route path='/mathildaPath' component={ButtonArea} />
+          <Route exact path='/' component={Welcome} />
+          <Route path='/ebd' component={Ebd} />
           <Route path='/loginPath' component={loginClass} />
         </div>
-      </BrowserRouter>
+      </Router>
     );
   }
 }
-
-const welcome =() => 
-  <Jumbotron style={divStyle}>
-    <h1>Willkommen bei EBD</h1>
-    <p>Willkommen beim Entwicklungsbeobachtungs und Dokumentationstool!</p>
-    <br/>
-    <p><Button bsStyle="primary" href="./loginPath">Anmelden</Button></p>
-    <p><Button bsStyle="primary" href="./welcomePath">Registrieren</Button></p>
-  </Jumbotron>
-
-const mathilda =() =>
-<div>
-  <Jumbotron style={divStyle}>
-    <h1>Willkommen bei Mathilda und Lilly</h1>
-    <p>Willkommen beim Entwicklungsbeobachtungs und Dokumentationstool!</p>
-    <p><Button bsStyle="primary" href="./">Home</Button></p>
-  </Jumbotron>
-</div>
 
 export default App;

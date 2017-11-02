@@ -25,9 +25,8 @@ class ButtonArea extends Component {
     return(
       <div style={divStyle}>
         <Button href="./mathilda">zurück
-        </Button>
-        <Button href="./mathilda">home
-        </Button>
+        </Button>        
+        <Button bsStyle="default" href="./">Home</Button>
         <Button href="./mathilda">weiter
         </Button>
       </div>

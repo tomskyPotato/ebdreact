@@ -1,7 +1,6 @@
 {
   "name": "app",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "flexbox-react": "^4.4.0",
     "prop-types": "^15.6.0",
@@ -17,5 +16,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "webpack": "^3.8.1"
   }
 }

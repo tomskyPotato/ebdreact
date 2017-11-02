@@ -3,7 +3,6 @@ html {
   margin: auto;
 }
 
-
 @media all and (max-width: 1600px) {
   html{
       width: auto;
