@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import { Link } from 'react-router-dom';
-import './styles/login.css';
+import '../styles/login.css';
 
 export default class loginClass extends Component {
   constructor(props) {
@@ -48,7 +48,7 @@ export default class loginClass extends Component {
               type="password"
             />
           </FormGroup>
-          <Link to="/ebd" >
+          <Link to="/kinder" >
             <Button
               block
               bsSize="large"
