@@ -13,11 +13,11 @@ export default class Ebd extends Component{
     this.handleSelect = this.handleSelect.bind(this);
   }
   
-  handleSelect(eventKey) {
-    this.setState({
-      activeKey: eventKey
-    });
-  }
+    handleSelect(activeKey) {
+      this.setState({
+        activeKey: activeKey,
+      });
+    }
 
   render(){
     return(
@@ -27,7 +27,6 @@ export default class Ebd extends Component{
         {/*// TODO: Informationen zum Kind*/}
         <NaviBereich click={this.handleSelect} />
         <Tabelle activeKey={this.state.activeKey}/>
-        <p>{this.state.activeKey}</p>
         {/*// TODO: Home Button in die Navileiste. Home ist dann Kinderauswahlfenster*/}
         <ButtonArea />
       </div>

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Nav, NavItem } from 'react-bootstrap';
-import bereiche from '../data/bereiche.json';
 import SozialEmotional from '../data/sozialEmotional.js';
 import Kognition from '../data/kognition.js';
 
@@ -14,7 +13,7 @@ export default class NaviBereich extends Component{
 
   handleSelect(eventKey) {
     this.setState({
-      activeKey: eventKey
+      activeKey: eventKey,
     });
     this.props.click(eventKey);
   }
@@ -24,8 +23,8 @@ export default class NaviBereich extends Component{
       <Nav bsStyle="tabs" activeKey={this.state.activeKey} onSelect={this.handleSelect.bind(this)}>
         <NavItem eventKey="0" >{SozialEmotional.titel}</NavItem>
         <NavItem eventKey="1" >{Kognition.titel}</NavItem>
-        <NavItem eventKey="2" href="./kinder">{bereiche[2].titel}</NavItem>
-        <NavItem eventKey="3" href="./">{bereiche[3].titel}</NavItem>
+        <NavItem eventKey="2" href="./kinder">Titel</NavItem>
+        <NavItem eventKey="3" href="./">active Key: {this.state.activeKey}</NavItem>
       </Nav>
     );
   }

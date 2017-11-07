@@ -3,6 +3,9 @@ const sozialEmotional = {
 
         fragen: [
         {
+            titel: 'Sozial Emotional',
+        },
+        {
             id: 0,
             name: 'Frage 1',
             beschreibung: 'Kann Kopf und Brust anheben',
