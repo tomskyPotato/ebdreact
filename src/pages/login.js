@@ -48,7 +48,7 @@ export default class loginClass extends Component {
               type="password"
             />
           </FormGroup>
-          <Link to="/kinder" >
+          <Link to="/ebd" >
             <Button
               block
               bsSize="large"

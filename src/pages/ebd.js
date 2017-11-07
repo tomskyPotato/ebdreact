@@ -7,7 +7,16 @@ import Tabelle from '../components/tabelle.js';
 export default class Ebd extends Component{
   constructor(props){
     super(props);
-    this.state = {bereichAcitve: 0};
+    this.state = {
+      activeKey: '0',
+    };
+    this.handleSelect = this.handleSelect.bind(this);
+  }
+  
+  handleSelect(eventKey) {
+    this.setState({
+      activeKey: eventKey
+    });
   }
 
   render(){
@@ -16,8 +25,9 @@ export default class Ebd extends Component{
       {/*// TODO: Name des Angemeldeten in die Navileiste*/}
         <Navi />
         {/*// TODO: Informationen zum Kind*/}
-        <NaviBereich />
-        <Tabelle />
+        <NaviBereich click={this.handleSelect} />
+        <Tabelle activeKey={this.state.activeKey}/>
+        <p>{this.state.activeKey}</p>
         {/*// TODO: Home Button in die Navileiste. Home ist dann Kinderauswahlfenster*/}
         <ButtonArea />
       </div>
