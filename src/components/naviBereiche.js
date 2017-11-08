@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { Nav, NavItem } from 'react-bootstrap';
-import SozialEmotional from '../data/sozialEmotional.js';
-import Kognition from '../data/kognition.js';
+import Fragen from '../data/bereiche.js';
+
+const divStyle = {
+  outline: 'none',
+}
 
 export default class NaviBereich extends Component{
   constructor(props) {
@@ -20,12 +23,16 @@ export default class NaviBereich extends Component{
 
   render() {
     return (
-      <Nav bsStyle="tabs" activeKey={this.state.activeKey} onSelect={this.handleSelect.bind(this)}>
-        <NavItem eventKey="0" >{SozialEmotional.titel}</NavItem>
-        <NavItem eventKey="1" >{Kognition.titel}</NavItem>
-        <NavItem eventKey="2" href="./kinder">Titel</NavItem>
-        <NavItem eventKey="3" href="./">active Key: {this.state.activeKey}</NavItem>
-      </Nav>
+      <div style={divStyle}> 
+        <Nav bsStyle="tabs" autoFocus="false" activeKey={this.state.activeKey} onSelect={this.handleSelect.bind(this)}>
+          <NavItem eventKey="0">{Fragen[0].titel}</NavItem>
+          <NavItem eventKey="1" >{Fragen[1].titel}</NavItem>
+          <NavItem eventKey="2" >{Fragen[2].titel}</NavItem>
+          <NavItem eventKey="3" >{Fragen[3].titel}</NavItem>
+          <NavItem eventKey="4" >{Fragen[4].titel}</NavItem>
+          <NavItem eventKey="5" >{Fragen[5].titel}</NavItem>
+        </Nav>
+      </div>
     );
   }
 };
