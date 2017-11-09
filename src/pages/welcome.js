@@ -15,7 +15,7 @@ export default class Welcome extends Component{
             <h1>Willkommen bei EBD</h1>
             <p>Willkommen beim Entwicklungsbeobachtungs und Dokumentationstool!</p>
             <br/>
-            <Link  to="/loginPath"><Button bsStyle="primary" type="submit">Anmelden</Button></Link>
+            <Button href="/loginPath" bsStyle="primary" type="submit">Anmelden</Button>
             <br/>
             <br/>
             <p><Button bsStyle="default" href="/">Registrieren</Button></p>

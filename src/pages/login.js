@@ -6,7 +6,7 @@ import '../styles/login.css';
 export default class loginClass extends Component {
   constructor(props) {
     super(props);
-
+    this.handleClick = this.handleClick.bind(this);
     this.state = {
       email: "tomsky@ebd.de",
       password: "12345ABC"
@@ -25,6 +25,10 @@ export default class loginClass extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
+  }
+
+  handleClick = event => {
+    this.props.click(this.state.email);
   }
 
   render() {
@@ -48,24 +52,20 @@ export default class loginClass extends Component {
               type="password"
             />
           </FormGroup>
-          <Link to="/ebd" >
-            <Button
-              block
-              bsSize="large"
-              disabled={!this.validateForm()}
-              type="submit"
-              >
-              Login
-            </Button>
-          </Link>
-          <Link to="/">
-            <Button
-              block
-              bsSize="large"
+          <Button
+            href="/Kinder"
+            block
+            bsSize="large"
+            onClick={ this.handleClick.bind(this) }
             >
-              Cancel
-            </Button>
-          </Link>
+            Login
+          </Button>
+          <Button
+            block
+            bsSize="large"
+          >
+            Cancel
+          </Button>
         </form>
       </div>
     );

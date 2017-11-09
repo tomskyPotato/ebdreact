@@ -24,10 +24,10 @@ class ButtonArea extends Component {
   render(){
     return(
       <div style={divStyle}>
-        <Button href="./mathilda">zurück
+        <Button href="./Kinder">zurück
         </Button>        
         <Button bsStyle="default" href="./">Home</Button>
-        <Button href="./mathilda">weiter
+        <Button href="./Kinder">weiter
         </Button>
       </div>
     );

@@ -1,0 +1,268 @@
+{
+    "Bereiche": {
+        "Handlungs- und Bewegungssteuerung": {
+            "Frage 1": {
+                "id": 0,
+                "name": "Frage 1",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 1 Handlungs- und Bewegungssteuerung",
+                "uebung": "Übung 1 Handlungs- und Bewegungssteuerung"
+            },
+            "Frage 2": {
+                "id": 1,
+                "name": "Frage 2",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 2 Handlungs- und Bewegungssteuerung",
+                "uebung": "Übung 2 Handlungs- und Bewegungssteuerung"
+            },
+            "Frage 3": {
+                "id": 2,
+                "name": "Frage 3",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 3 Handlungs- und Bewegungssteuerung",
+                "uebung": "Übung 3 Handlungs- und Bewegungssteuerung"
+            },
+            "Frage 4": {
+                "id": 3,
+                "name": "Frage 4",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 4 Handlungs- und Bewegungssteuerung",
+                "uebung": "Übung 4 Handlungs- und Bewegungssteuerung"
+            },
+            "Frage 5": {
+                "id": 4,
+                "name": "Frage 5",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 5 Handlungs- und Bewegungssteuerung",
+                "uebung": "Übung 5 Handlungs- und Bewegungssteuerung"
+            },
+            "Frage 6": {
+                "id": 5,
+                "name": "Frage 6",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 6 Handlungs- und Bewegungssteuerung",
+                "uebung": "Übung 6 Handlungs- und Bewegungssteuerung"
+            }
+        },
+        "Fein- und Visuomotorik": {
+            "Frage 1": {
+                "id": 0,
+                "name": "Frage 1",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 1 Fein- und Visuomotorik",
+                "uebung": "Übung 1 Fein- und Visuomotorik"
+            },
+            "Frage 2": {
+                "id": 1,
+                "name": "Frage 2",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 2 Fein- und Visuomotorik",
+                "uebung": "Übung 2 Fein- und Visuomotorik"
+            },
+            "Frage 3": {
+                "id": 2,
+                "name": "Frage 3",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 3 Fein- und Visuomotorik",
+                "uebung": "Übung 3 Fein- und Visuomotorik"
+            },
+            "Frage 4": {
+                "id": 3,
+                "name": "Frage 4",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 4 Fein- und Visuomotorik",
+                "uebung": "Übung 4 Fein- und Visuomotorik"
+            },
+            "Frage 5": {
+                "id": 4,
+                "name": "Frage 5",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 5 Fein- und Visuomotorik",
+                "uebung": "Übung 5 Fein- und Visuomotorik"
+            },
+            "Frage 6": {
+                "id": 5,
+                "name": "Frage 6",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 6 Fein- und Visuomotorik",
+                "uebung": "Übung 6 Fein- und Visuomotorik"
+            }
+        },
+        "Sprache rezeptiv und expressiv": {
+            "Frage 1": {
+                "id": 0,
+                "name": "Frage 1",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 1 Sprache rezeptiv und expressiv",
+                "uebung": "Übung 1 Sprache rezeptiv und expressiv"
+            },
+            "Frage 2": {
+                "id": 1,
+                "name": "Frage 2",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 2 Sprache rezeptiv und expressiv",
+                "uebung": "Übung 2 Sprache rezeptiv und expressiv"
+            },
+            "Frage 3": {
+                "id": 2,
+                "name": "Frage 3",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 3 Sprache rezeptiv und expressiv",
+                "uebung": "Übung 3 Sprache rezeptiv und expressiv"
+            },
+            "Frage 4": {
+                "id": 3,
+                "name": "Frage 4",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 4 Sprache rezeptiv und expressiv",
+                "uebung": "Übung 4 Sprache rezeptiv und expressiv"
+            },
+            "Frage 5": {
+                "id": 4,
+                "name": "Frage 5",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 5 Sprache rezeptiv und expressiv",
+                "uebung": "Übung 5 Sprache rezeptiv und expressiv"
+            },
+            "Frage 6": {
+                "id": 5,
+                "name": "Frage 6",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 6 Sprache rezeptiv und expressiv",
+                "uebung": "Übung 6 Sprache rezeptiv und expressiv"
+            }
+        },
+        "Kognitive Entwicklung": {
+            "Frage 1": {
+                "id": 0,
+                "name": "Frage 1",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 1 Kognitive Entwicklung",
+                "uebung": "Übung 1 Kognitive Entwicklung"
+            },
+            "Frage 2": {
+                "id": 1,
+                "name": "Frage 2",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 2 Kognitive Entwicklung",
+                "uebung": "Übung 2 Kognitive Entwicklung"
+            },
+            "Frage 3": {
+                "id": 2,
+                "name": "Frage 3",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 3 Kognitive Entwicklung",
+                "uebung": "Übung 3 Kognitive Entwicklung"
+            },
+            "Frage 4": {
+                "id": 3,
+                "name": "Frage 4",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 4 Kognitive Entwicklung",
+                "uebung": "Übung 4 Kognitive Entwicklung"
+            },
+            "Frage 5": {
+                "id": 4,
+                "name": "Frage 5",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 5 Kognitive Entwicklung",
+                "uebung": "Übung 5 Kognitive Entwicklung"
+            },
+            "Frage 6": {
+                "id": 5,
+                "name": "Frage 6",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 6 Kognitive Entwicklung",
+                "uebung": "Übung 6 Kognitive Entwicklung"
+            }
+        },
+        "Soziale Entwicklung": {
+            "Frage 1": {
+                "id": 0,
+                "name": "Frage 1",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 1 Soziale Entwicklung",
+                "uebung": "Übung 1 Soziale Entwicklung"
+            },
+            "Frage 2": {
+                "id": 1,
+                "name": "Frage 2",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 2 Soziale Entwicklung",
+                "uebung": "Übung 2 Soziale Entwicklung"
+            },
+            "Frage 3": {
+                "id": 2,
+                "name": "Frage 3",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 3 Soziale Entwicklung",
+                "uebung": "Übung 3 Soziale Entwicklung"
+            },
+            "Frage 4": {
+                "id": 3,
+                "name": "Frage 4",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 4 Soziale Entwicklung",
+                "uebung": "Übung 4 Soziale Entwicklung"
+            },
+            "Frage 5": {
+                "id": 4,
+                "name": "Frage 5",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 5 Soziale Entwicklung",
+                "uebung": "Übung 5 Soziale Entwicklung"
+            },
+            "Frage 6": {
+                "id": 5,
+                "name": "Frage 6",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 6 Soziale Entwicklung",
+                "uebung": "Übung 6 Soziale Entwicklung"
+            }
+        },
+        "Emotionale Entwicklung": {
+            "Frage 1": {
+                "id": 0,
+                "name": "Frage 1",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 1 Emotionale Entwicklung",
+                "uebung": "Übung 1 Emotionale Entwicklung"
+            },
+            "Frage 2": {
+                "id": 1,
+                "name": "Frage 2",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 2 Emotionale Entwicklung",
+                "uebung": "Übung 2 Emotionale Entwicklung"
+            },
+            "Frage 3": {
+                "id": 2,
+                "name": "Frage 3",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 3 Emotionale Entwicklung",
+                "uebung": "Übung 3 Emotionale Entwicklung"
+            },
+            "Frage 4": {
+                "id": 3,
+                "name": "Frage 4",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 4 Emotionale Entwicklung",
+                "uebung": "Übung 4 Emotionale Entwicklung"
+            },
+            "Frage 5": {
+                "id": 4,
+                "name": "Frage 5",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 5 Emotionale Entwicklung",
+                "uebung": "Übung 5 Emotionale Entwicklung"
+            },
+            "Frage 6": {
+                "id": 5,
+                "name": "Frage 6",
+                "beschreibung": "Kann Kopf und Brust anheben",
+                "frage": "Frage 6 Emotionale Entwicklung",
+                "uebung": "Übung 6 Emotionale Entwicklung"
+            }
+        }
+    }
+}

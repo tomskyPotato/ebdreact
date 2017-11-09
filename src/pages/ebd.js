@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Navi from '../components/navbar.js';
 import ButtonArea from './buttonarea.js';
 import NaviBereich from '../components/naviBereiche.js';
-import Tabelle from '../components/tabelle.js';
 
 export default class Ebd extends Component{
   constructor(props){
@@ -26,7 +25,6 @@ export default class Ebd extends Component{
         <Navi />
         {/*// TODO: Informationen zum Kind*/}
         <NaviBereich click={this.handleSelect} />
-        <Tabelle activeKey={this.state.activeKey}/>
         {/*// TODO: Home Button in die Navileiste. Home ist dann Kinderauswahlfenster*/}
         <ButtonArea />
       </div>
