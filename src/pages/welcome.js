@@ -1,12 +1,39 @@
 import React, { Component } from 'react';
 import { Button, Jumbotron } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { createStore } from 'redux'
+
+const reducer = (state = 0, action) => {
+  switch (action.type) {
+    case 'INCREMENT':
+      return state + 1
+    case 'DECREMENT':
+      return state - 1
+    default:
+      return state
+  }
+}
+
+const store = createStore(reducer)
 
 const divStyle = {
   textAlign: 'center',
 }
 
 export default class Welcome extends Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      activeKey: '0',
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+  
+  handleClick(event) {
+    this.setState({
+      activeKey: event,
+    });
+    store.dispatch({ type: 'INCREMENT' });
+  }
 
   render(){
     return(
@@ -19,6 +46,7 @@ export default class Welcome extends Component{
             <br/>
             <br/>
             <p><Button bsStyle="default" href="/">Registrieren</Button></p>
+            <p><Button bsStyle="default" onClick={this.handleClick}>{store.getState()}</Button></p>
         </Jumbotron>
       </div>
     );

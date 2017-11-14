@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
-import { Link } from 'react-router-dom';
 import '../styles/login.css';
 
 export default class loginClass extends Component {
@@ -8,7 +7,7 @@ export default class loginClass extends Component {
     super(props);
     this.state = {
       email: "tomsky@ebd.de",
-      password: "12345ABC"
+      password: "12345ABC",
     };
   }
 
@@ -65,8 +64,3 @@ export default class loginClass extends Component {
     );
   }
 }
-
-
-  {/*handleClick = event => {
-    this.props.click(this.state.email);
-  }*/}
