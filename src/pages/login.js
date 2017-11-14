@@ -6,7 +6,6 @@ import '../styles/login.css';
 export default class loginClass extends Component {
   constructor(props) {
     super(props);
-    this.handleClick = this.handleClick.bind(this);
     this.state = {
       email: "tomsky@ebd.de",
       password: "12345ABC"
@@ -25,10 +24,6 @@ export default class loginClass extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-  }
-
-  handleClick = event => {
-    this.props.click(this.state.email);
   }
 
   render() {
@@ -56,7 +51,6 @@ export default class loginClass extends Component {
             href="/Kinder"
             block
             bsSize="large"
-            onClick={ this.handleClick.bind(this) }
             >
             Login
           </Button>
@@ -71,3 +65,8 @@ export default class loginClass extends Component {
     );
   }
 }
+
+
+  {/*handleClick = event => {
+    this.props.click(this.state.email);
+  }*/}
