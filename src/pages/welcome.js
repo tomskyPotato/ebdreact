@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button, Jumbotron } from 'react-bootstrap';
 import { createStore } from 'redux'
 
+//Der Reducer übernimmt den aktuellen state und eine action und gibt den neuen state zurück.
 const reducer = (state = 0, action) => {
   switch (action.type) {
     case 'INCREMENT':
@@ -13,6 +14,7 @@ const reducer = (state = 0, action) => {
   }
 }
 
+//Im store sind alle states gespeichert und können abgerufen werden
 const store = createStore(reducer)
 
 const divStyle = {
@@ -32,6 +34,7 @@ export default class Welcome extends Component{
     this.setState({
       activeKey: event,
     });
+    //action im store aufrufen
     store.dispatch({ type: 'INCREMENT' });
   }
 
