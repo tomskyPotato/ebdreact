@@ -8,19 +8,19 @@ import Kinder from './pages/kinderauswahl.js';
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
-const initialState = {
-  number: 7
-}
+const initialState = 
+  {
+    text: 'Use Redux'
+  }
 
 //Der Reducer übernimmt den aktuellen state und eine action und gibt den neuen state zurück.
-const reducer = (state, action) => {
+const reducer = (state = "default", action) => {
   switch (action.type) {
     case 'INCREMENT':
-      return initialState.number + 1
-    case 'DECREMENT':
-      return initialState.number - 1
+    return action.text
     default:
-      return initialState
+      state = "Hallo"
+      return state
   }
 }
 
@@ -33,7 +33,7 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <div className="App">
-            <Route exact path='/' component={Welcome} />
+            <Route exact path='/' component={Welcome}/>
             <Route path='/ebd' component={Ebd} />
             <Route path='/Kinder' component={Kinder} />
             <Route path='/loginPath' component={loginClass} />

@@ -1,19 +1,13 @@
 import React from 'react';
 import { Button, Jumbotron } from 'react-bootstrap';
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 
 const divStyle = {
   textAlign: 'center',
 }
 
-const addTodo = text => {
-  return {
-    type: "ADD_NAME",
-    text
-  }
-}
-
-let Welcome = ({ dispatch, dataBase }) => {
+let Welcome = ({ text, onClick }) => {
     return(
       <div style={divStyle}>
         <Jumbotron style={divStyle}>
@@ -24,19 +18,46 @@ let Welcome = ({ dispatch, dataBase }) => {
             <br/>
             <br/>
             <p><Button bsStyle="default" href="/">Registrieren</Button></p>
-            <p><Button bsStyle="default" 
-             onClick={() => dispatch({ type: 'INCREMENT' })}
-            >{ dataBase.number }</Button></p>
-            <p><Button bsStyle="default">{ dataBase.number }</Button></p>
+
+            <p><Button  bsStyle="default" 
+            onClick={e => {
+              e.preventDefault()
+              onClick()
+            }}>
+            </Button></p>
+            
+            <p>
+              { text }
+            </p>
+
         </Jumbotron>
       </div>
     )
 }
 
-const mapStateToProps = (state) => ({
-  dataBase: state
+Welcome.propTypes = {
+  text: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired
+}
+
+const addTodo = (text) => ({
+    type: 'INCREMENT',
+    text
 })
 
-Welcome = connect(mapStateToProps)(Welcome)
+const mapStateToProps = (state) => ({
+  text: state
+})
+
+const mapDispatchToProps = (dispatch, ownProps) => ({
+  onClick: () => {
+    dispatch(addTodo("Thomas"))
+  }
+})
+
+Welcome = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Welcome)
 
 export default Welcome
