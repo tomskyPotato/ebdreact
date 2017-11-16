@@ -5,34 +5,43 @@ import Welcome from './pages/welcome.js';
 import loginClass from './pages/login.js';
 import Ebd from './pages/ebd.js';
 import Kinder from './pages/kinderauswahl.js';
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
 
-class App extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      activeKey: '0',
-    };
-    this.handleSelect = this.handleSelect.bind(this);
-  }
-  
-    handleSelect(event) {
-      this.setState({
-        activeKey: event,
-      });
-    }
+const initialState = {
+  number: 7
+}
 
-  render() {
-    return (
-      <Router>
-        <div className="App">
-          <Route exact path='/' component={Welcome} />
-          <Route path='/ebd' component={Ebd} />
-          <Route path='/Kinder' component={Kinder} />
-          <Route path='/loginPath' component={loginClass} click={this.handleSelect} />
-        </div>
-      </Router>
-    );
+//Der Reducer übernimmt den aktuellen state und eine action und gibt den neuen state zurück.
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'INCREMENT':
+      return initialState.number + 1
+    case 'DECREMENT':
+      return initialState.number - 1
+    default:
+      return initialState
   }
 }
+
+//Im store sind alle states gespeichert und können abgerufen werden
+const store = createStore(reducer);
+
+class App extends Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <Router>
+          <div className="App">
+            <Route exact path='/' component={Welcome} />
+            <Route path='/ebd' component={Ebd} />
+            <Route path='/Kinder' component={Kinder} />
+            <Route path='/loginPath' component={loginClass} />
+          </div>
+        </Router>
+      </Provider>
+    );
+  }
+};
 
 export default App;

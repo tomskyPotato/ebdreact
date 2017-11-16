@@ -1,44 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Button, Jumbotron } from 'react-bootstrap';
-import { createStore } from 'redux'
-
-//Der Reducer übernimmt den aktuellen state und eine action und gibt den neuen state zurück.
-const reducer = (state = 0, action) => {
-  switch (action.type) {
-    case 'INCREMENT':
-      return state + 1
-    case 'DECREMENT':
-      return state - 1
-    default:
-      return state
-  }
-}
-
-//Im store sind alle states gespeichert und können abgerufen werden
-const store = createStore(reducer)
+import { connect } from 'react-redux'
 
 const divStyle = {
   textAlign: 'center',
 }
 
-export default class Welcome extends Component{
-  constructor(props){
-    super(props);
-    this.state = {
-      activeKey: '0',
-    };
-    this.handleClick = this.handleClick.bind(this);
+const addTodo = text => {
+  return {
+    type: "ADD_NAME",
+    text
   }
-  
-  handleClick(event) {
-    this.setState({
-      activeKey: event,
-    });
-    //action im store aufrufen
-    store.dispatch({ type: 'INCREMENT' });
-  }
+}
 
-  render(){
+let Welcome = ({ dispatch, dataBase }) => {
     return(
       <div style={divStyle}>
         <Jumbotron style={divStyle}>
@@ -49,9 +24,19 @@ export default class Welcome extends Component{
             <br/>
             <br/>
             <p><Button bsStyle="default" href="/">Registrieren</Button></p>
-            <p><Button bsStyle="default" onClick={this.handleClick}>{store.getState()}</Button></p>
+            <p><Button bsStyle="default" 
+             onClick={() => dispatch({ type: 'INCREMENT' })}
+            >{ dataBase.number }</Button></p>
+            <p><Button bsStyle="default">{ dataBase.number }</Button></p>
         </Jumbotron>
       </div>
-    );
-  }
+    )
 }
+
+const mapStateToProps = (state) => ({
+  dataBase: state
+})
+
+Welcome = connect(mapStateToProps)(Welcome)
+
+export default Welcome

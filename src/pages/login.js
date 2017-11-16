@@ -1,48 +1,24 @@
-import React, { Component } from "react";
+import React from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import { connect } from 'react-redux'
 import '../styles/login.css';
 
-export default class loginClass extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      email: "tomsky@ebd.de",
-      password: "12345ABC",
-    };
-  }
-
-  validateForm() {
-    return this.state.email.length > 0 && this.state.password.length > 0;
-  }
-
-  handleChange = event => {
-    this.setState({
-      [event.target.id]: event.target.value
-    });
-  }
-
-  handleSubmit = event => {
-    event.preventDefault();
-  }
-
-  render() {
+let loginClass = ({ dispatch, dataBase }) => {
     return (
       <div className="Login">
-        <form onSubmit={this.handleSubmit}>
+        <form >
           <FormGroup controlId="email" bsSize="large">
             <ControlLabel>Email</ControlLabel>
             <FormControl
               autoFocus
               type="email"
-              value={this.state.email}
-              onChange={this.handleChange}
+              value={dataBase.name}
             />
           </FormGroup>
           <FormGroup controlId="password" bsSize="large">
             <ControlLabel>Password</ControlLabel>
             <FormControl
-              value={this.state.password}
-              onChange={this.handleChange}
+              value={dataBase.password}
               type="password"
             />
           </FormGroup>
@@ -61,6 +37,13 @@ export default class loginClass extends Component {
           </Button>
         </form>
       </div>
-    );
-  }
+    )
 }
+
+const mapStateToProps = (state) => ({
+  dataBase: state
+})
+
+loginClass = connect(mapStateToProps)(loginClass)
+
+export default loginClass

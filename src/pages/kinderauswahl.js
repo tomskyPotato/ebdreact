@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import { Button } from "react-bootstrap";
+import { connect } from 'react-redux'
 import Navi from '../components/navbar.js';
 
-export default class Ebd extends Component{
+const addTodo = text => {
+  return {
+    type: "ADD_NAME",
+    text
+  }
+}
 
-  render(){
+let Kinder = ({ dispatch, dataBase }) => {
     return(
       <div>
       {/*// TODO: Name des Angemeldeten in die Navileiste*/}
@@ -20,6 +26,13 @@ export default class Ebd extends Component{
           <p>Name Mädchen</p>
         </Button>
       </div>
-    );
-  }
+    )
 }
+
+const mapStateToProps = (state) => ({
+  dataBase: state
+})
+
+Kinder = connect(mapStateToProps)(Kinder)
+
+export default Kinder
