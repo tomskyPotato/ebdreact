@@ -14,12 +14,11 @@ const initialState =
   }
 
 //Der Reducer übernimmt den aktuellen state und eine action und gibt den neuen state zurück.
-const reducer = (state = "default", action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case 'INCREMENT':
-    return action.text
+    return action
     default:
-      state = "Hallo"
       return state
   }
 }
