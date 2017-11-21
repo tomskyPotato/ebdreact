@@ -1,12 +1,17 @@
+//react
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+//redux
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+
+//Pages & Styles
 import './styles/App.css';
 import Welcome from './pages/welcome.js';
 import loginClass from './pages/login.js';
 import Ebd from './pages/ebd.js';
 import Kinder from './pages/kinderauswahl.js';
-import { createStore } from 'redux'
-import { Provider } from 'react-redux'
 
 const initialState = 
   {

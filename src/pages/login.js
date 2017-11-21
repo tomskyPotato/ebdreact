@@ -1,9 +1,10 @@
 import React from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'
 import '../styles/login.css';
 
-let loginClass = ({ dispatch, dataBase }) => {
+const loginClass = ({ dispatch, dataBase }) => {
     return (
       <div className="Login">
         <form >
@@ -22,19 +23,22 @@ let loginClass = ({ dispatch, dataBase }) => {
               type="password"
             />
           </FormGroup>
-          <Button
-            href="/Kinder"
-            block
-            bsSize="large"
-            >
-            Login
-          </Button>
-          <Button
-            block
-            bsSize="large"
-          >
-            Cancel
-          </Button>
+            <Link to="/Kinder">
+              <Button
+                block
+                bsSize="large"
+                >
+                Login
+              </Button>
+            </Link>
+            <Link to="/">
+              <Button
+                block
+                bsSize="large"
+              >
+                Cancel
+              </Button>
+          </Link>
         </form>
       </div>
     )
@@ -44,6 +48,6 @@ const mapStateToProps = (state) => ({
   dataBase: state
 })
 
-loginClass = connect(mapStateToProps)(loginClass)
+   //withRouter muss dazu aufgrund von Problemen mit ReactRouter und redux
 
-export default loginClass
+export default connect(mapStateToProps)(loginClass)

@@ -1,0 +1,41 @@
+{
+    "user": [
+      {
+        "id": 0,
+        "name": "Lilly",
+        "angemeldet": true
+      },
+      {
+        "id": 1,
+        "name": "Sarah",
+        "angemeldet": false
+      },
+      {
+        "id": 2,
+        "name": "Thomas",
+        "angemeldet": false
+      }
+    ],
+    "kinder": [
+      {
+        "id": 0,
+        "name": "Mathilda",
+        "geschlecht": "w",
+        "alter": 15,
+        "betreuer": [
+          1,
+          2
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Jonas",
+        "geschlecht": "m",
+        "alter": 23,
+        "betreuer": [
+          0,
+          2
+        ]
+      }
+    ]
+  }
