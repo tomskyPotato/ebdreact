@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 //redux
-import { createStore } from 'redux'
+import { createStore, combineReducers } from 'redux'
 import { Provider } from 'react-redux'
 
 //Pages & Styles
@@ -12,6 +12,8 @@ import Welcome from './pages/welcome.js';
 import loginClass from './pages/login.js';
 import Ebd from './pages/ebd.js';
 import Kinder from './pages/kinderauswahl.js';
+import userStateManager from './reducers'
+import initialStateJSON from './data/reduxStore.json'
 
 const initialState = 
   {

@@ -1,41 +1,96 @@
 {
+    "currentUser": 0,
     "user": [
-      {
-        "id": 0,
-        "name": "Lilly",
-        "angemeldet": true
-      },
-      {
-        "id": 1,
-        "name": "Sarah",
-        "angemeldet": false
-      },
-      {
-        "id": 2,
-        "name": "Thomas",
-        "angemeldet": false
-      }
+        {
+            "id": 0,
+            "name": "Lilly",
+            "KinderID": [
+            1,
+            2
+            ]
+        },
+        {
+            "id": 1,
+            "name": "Sarah",
+            "KinderID": [
+            1,
+            2
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Thomas",
+            "KinderID": [
+            1,
+            2
+            ]
+        }
     ],
+    "currentChild": 0,
     "kinder": [
-      {
-        "id": 0,
-        "name": "Mathilda",
-        "geschlecht": "w",
-        "alter": 15,
-        "betreuer": [
-          1,
-          2
-        ]
-      },
-      {
-        "id": 1,
-        "name": "Jonas",
-        "geschlecht": "m",
-        "alter": 23,
-        "betreuer": [
-          0,
-          2
-        ]
-      }
+        {
+            "id": 0,
+            "name": "Mathilda",
+            "geschlecht": "w",
+            "alter": 15,
+            "betreuerID": [
+                0,
+                1,
+                2
+            ]
+        },
+        {
+            "id": 1,
+            "name": "Jonas",
+            "geschlecht": "m",
+            "alter": 23,
+            "betreuerID": [
+                0,
+                2
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Benny",
+            "geschlecht": "m",
+            "alter": 33,
+            "betreuerID": [
+                0,
+                1,
+                3
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Nora",
+            "geschlecht": "w",
+            "alter": 17,
+            "betreuerID": [
+                0,
+                1,
+                2
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Ferdi",
+            "geschlecht": "m",
+            "alter": 29,
+            "betreuerID": [
+                0,
+                1,
+                2
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Clara",
+            "geschlecht": "w",
+            "alter": 23,
+            "betreuerID": [
+                0,
+                2
+            ]
+        }
     ]
   }
