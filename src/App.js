@@ -8,10 +8,10 @@ import { Provider } from 'react-redux'
 
 //Pages & Styles
 import './styles/App.css';
-import Welcome from './pages/welcome.js';
-import loginClass from './pages/login.js';
-import Ebd from './pages/ebd.js';
-import Kinder from './pages/kinderauswahl.js';
+import Welcome from './components/welcome.js';
+import loginClass from './components/login.js';
+import Ebd from './components/ebd.js';
+import Kinder from './components/kinderauswahl.js';
 import userStateManager from './reducers'
 import initialStateJSON from './data/reduxStore.json'
 
