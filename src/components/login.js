@@ -1,25 +1,24 @@
 import React from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux'
 import '../styles/login.css';
 
-const loginClass = ({ dispatch, dataBase }) => {
+const loginComponent = ({ userName }) => {
     return (
       <div className="Login">
         <form >
           <FormGroup controlId="email" bsSize="large">
-            <ControlLabel>Email</ControlLabel>
+            <ControlLabel>Email{userName}</ControlLabel>
             <FormControl
               autoFocus
-              type="email"
-              value={dataBase.name}
+              value={userName}
+              //type="email"
             />
           </FormGroup>
           <FormGroup controlId="password" bsSize="large">
             <ControlLabel>Password</ControlLabel>
             <FormControl
-              value={dataBase.password}
+              value={userName}
               type="password"
             />
           </FormGroup>
@@ -44,10 +43,6 @@ const loginClass = ({ dispatch, dataBase }) => {
     )
 }
 
-const mapStateToProps = (state) => ({
-  dataBase: state
-})
-
    //withRouter muss dazu aufgrund von Problemen mit ReactRouter und redux
 
-export default connect(mapStateToProps)(loginClass)
+export default loginComponent

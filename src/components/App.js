@@ -3,17 +3,17 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 //redux
-import { createStore, combineReducers } from 'redux'
+import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
 //Pages & Styles
-import './styles/App.css';
-import Welcome from './components/welcome.js';
-import loginClass from './components/login.js';
-import Ebd from './components/ebd.js';
-import Kinder from './components/kinderauswahl.js';
-import userStateManager from './reducers'
-import initialStateJSON from './data/reduxStore.json'
+import '../styles/App.css';
+import Welcome from './welcome.js';
+import loginComponent from './login.js';
+import Ebd from './ebd.js';
+import Kinder from './kinderauswahl.js';
+import userStateManager from '../reducers'
+import initialStateJSON from '../data/reduxStore.json'
 
 const initialState = 
   {
@@ -42,7 +42,7 @@ class App extends Component {
             <Route exact path='/' component={Welcome}/>
             <Route path='/ebd' component={Ebd} />
             <Route path='/Kinder' component={Kinder} />
-            <Route path='/loginPath' component={loginClass} />
+            <Route path='/loginPath' component={loginComponent} />
           </div>
         </Router>
       </Provider>

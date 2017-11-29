@@ -4,13 +4,6 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom';
 import Navi from '../components/navbar.js';
 
-const addTodo = text => {
-  return {
-    type: "ADD_NAME",
-    text
-  }
-}
-
 let Kinder = ({ dataBase }) => {
     return(
       <div>
