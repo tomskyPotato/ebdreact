@@ -5,3 +5,10 @@ export const changeUserState = userState => {
         userState
     }
 }
+
+export const dropDownUser = (id) => {
+    return {
+        type: 'DROP_DOWN_USER',
+        id
+    }
+}

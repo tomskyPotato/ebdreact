@@ -1,14 +1,12 @@
+import { combineReducers } from 'redux'
 
-import initialStateJSON from '../data/reduxStore.json'
+import reducerKinder from './kinder'
+import reducerUser from './user'
 
 //anmelde Status eines users ändern
-const mainReducer = (state = initialStateJSON, action) => {
-    switch(action.type){
-        case 'CHANGE_USER_STATE':
-            return action.userState
-        default:
-            return state
-    }
-}
+const mainReducer = combineReducers({
+    reducerKinder,
+    reducerUser
+})
 
 export default mainReducer

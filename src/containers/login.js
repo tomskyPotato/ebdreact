@@ -1,15 +1,20 @@
 import { connect } from 'react-redux'
 import loginComponent from '../components/login.js'
-import { stringAction } from '../actions'
+import { dropDownUser } from '../actions'
 
 //This is where state is catched (from the void) and copied over to the properties 
 //of loginComponent
 const mapStateToProps = (state, loginContainerProps) => ({
-    userName: "User1"
+    userData: state.reducerUser,
+    currentUser: state.reducerUser.map(user => 
+      (user.active === true)
+        ? user.email
+        : null
+      )
 })
 
 const mapDispatchToProps = {
-  onClickButton: stringAction
+  onClickButton: dropDownUser
 }
 
 const loginContainer = connect(
