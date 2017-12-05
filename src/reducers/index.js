@@ -5,8 +5,8 @@ import reducerUser from './user'
 
 //anmelde Status eines users ändern
 const mainReducer = combineReducers({
-    reducerKinder,
-    reducerUser
+    reducerUser,
+    reducerKinder
 })
 
 export default mainReducer

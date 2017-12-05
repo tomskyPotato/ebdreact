@@ -50,69 +50,41 @@ export const kinder = [
         "active": false,
         "name": "Mathilda",
         "geschlecht": "w",
-        "alter": 15,
-        "betreuerID": [
-            0,
-            1,
-            2
-        ]
+        "alter": 15
     },
     {
         "id": 1,
         "active": false,
         "name": "Jonas",
         "geschlecht": "m",
-        "alter": 23,
-        "betreuerID": [
-            0,
-            2
-        ]
+        "alter": 23
     },
     {
         "id": 2,
         "active": false,
         "name": "Benny",
         "geschlecht": "m",
-        "alter": 33,
-        "betreuerID": [
-            0,
-            1,
-            3
-        ]
+        "alter": 33
     },
     {
         "id": 3,
         "active": false,
         "name": "Nora",
         "geschlecht": "w",
-        "alter": 17,
-        "betreuerID": [
-            0,
-            1,
-            2
-        ]
+        "alter": 17
     },
     {
         "id": 4,
         "active": false,
         "name": "Ferdi",
         "geschlecht": "m",
-        "alter": 29,
-        "betreuerID": [
-            0,
-            1,
-            2
-        ]
+        "alter": 29
     },
     {
         "id": 5,
         "active": false,
         "name": "Clara",
         "geschlecht": "w",
-        "alter": 23,
-        "betreuerID": [
-            0,
-            2
-        ]
+        "alter": 23
     }
 ]

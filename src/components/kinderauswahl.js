@@ -1,28 +1,34 @@
-import React from 'react';
-import { Button } from "react-bootstrap";
-import { Link } from 'react-router-dom';
-import Navi from '../components/navbar.js';
+import React from 'react'
+import { Button } from "react-bootstrap"
+import { Link } from 'react-router-dom'
+import Navi from '../components/navbar.js'
 
-let kinderComponent = ({ dataBase, currentUser, currentKinder, kinderData }) => {
+const Buttonkind = ({ name, alter, geschlecht }) => {
   return(
-    <div>
-    {/*// TODO: Name des Angemeldeten in die Navileiste*/}
-      <Navi currentUser={ currentUser }/>
-      <Link to="/ebd">
-        <Button>
-          <img src={require("../data/pictures/junge.jpg")} alt="my" />
-          <p>Name Junge: {}</p>
-        </Button>
-      </Link>
-      {'  '}
-      <Link to="/ebd">
-        <Button>
-          <img src={require("../data/pictures/maedchen.jpg")} alt="my" />
-          <p>Name Mädchen {currentUser.Vorname}</p>
-        </Button>
-      </Link>
-    </div>
+    <Link to="/ebd">
+        <button>
+          {
+            (geschlecht === "w")
+            ? <img src={require("../data/pictures/maedchen.jpg")} alt="my" />
+            : <img src={require("../data/pictures/junge.jpg")} alt="my" />
+          }
+        <p>{ name }, { alter } Monate</p>
+        </button>{"   "}
+    </Link>
   )
 }
+
+const kinderComponent = ({ currentUser, currentKinder }) => (
+    <div>
+    {console.log(currentKinder)}
+      <Navi currentUser={ currentUser }/>
+        {currentKinder.map(item =>
+            <Buttonkind
+              key={item.id}
+              {...item}
+            />
+        )}
+    </div>
+  )
 
 export default kinderComponent

@@ -8,11 +8,13 @@ const loginComponent = ({ userData, onClickButton, currentUser }) => {
     return (
       <div className="Login">
         <form >
-          <FormGroup controlId="email" bsSize="large">
+          <FormGroup bsSize="large">
             <ControlLabel>Email</ControlLabel>
             <FormControl
               autoFocus
-              value={currentUser}
+              type="text"
+              value={currentUser.join("")}
+              placeholder="Email"
             />
             <DropdownButton bsSize="large" title="Username" id="bg-nested-dropdown">
               <MenuItem eventKey="1" onClick={() => onClickButton(0)}>
@@ -29,7 +31,7 @@ const loginComponent = ({ userData, onClickButton, currentUser }) => {
           <FormGroup controlId="password" bsSize="large">
             <ControlLabel>Password</ControlLabel>
             <FormControl
-              value={userData}
+              value="password"
               type="password"
             />
           </FormGroup>
