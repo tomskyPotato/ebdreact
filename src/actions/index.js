@@ -12,3 +12,10 @@ export const dropDownUser = (id) => {
         id
     }
 }
+
+export const kinderAuswahl = (id) => {
+    return {
+        type: 'KINDERAUSWAHL',
+        id
+    }
+}

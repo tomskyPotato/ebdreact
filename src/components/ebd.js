@@ -3,6 +3,10 @@ import Navi from '../components/navbar.js';
 import ButtonArea from './buttonarea.js';
 import NaviBereich from '../components/naviBereiche.js';
 
+var divStyle = {
+  backgroundColor: 'yellow'
+};
+
 export default class Ebd extends Component{
   constructor(props){
     super(props);
@@ -22,7 +26,10 @@ export default class Ebd extends Component{
     return(
       <div>
       {/*// TODO: Name des Angemeldeten in die Navileiste*/}
-        <Navi />
+        <Navi currentUser={ this.props.currentUser }/>
+        <div style={divStyle}>
+          { this.props.currentKind }
+        </div>
         {/*// TODO: Informationen zum Kind*/}
         <NaviBereich click={this.handleSelect} />
         {/*// TODO: Home Button in die Navileiste. Home ist dann Kinderauswahlfenster*/}

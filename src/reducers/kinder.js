@@ -1,7 +1,16 @@
 import { kinder } from '../data'
 
 const reducerKinder = (state = kinder, action) => {
-    return state
+    switch(action.type){
+        case "KINDERAUSWAHL":
+            return state.map(kind =>
+            (kind.id === action.id)
+                ? {...kind, active: !kind.active}
+                : {...kind, active: false}
+            )
+        default:
+            return state
+    }
 }
 
 export default reducerKinder
