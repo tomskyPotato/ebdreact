@@ -19,3 +19,10 @@ export const kinderAuswahl = (id) => {
         id
     }
 }
+
+export const fragenAuswahl = (id) => {
+    return {
+        type: 'FRAGEN_AUSWAHL',
+        id
+    }
+}

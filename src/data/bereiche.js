@@ -1,6 +1,8 @@
 const Fragen = [
     {   
         titel: "Handlungs- und Bewegungssteuerung",
+        id: 0,
+        active: true, //eine Frage muss initial true sein damit im ebdComponent etwas gezeigt werden kann
         Fragen:[
             {
                 id: 0,
@@ -49,6 +51,8 @@ const Fragen = [
 
     {   
         titel: 'Fein- und Visuomotorik',
+        id: 1,
+        active: false,
         Fragen:[
             {
                 id: 0,
@@ -97,6 +101,8 @@ const Fragen = [
     
     {   
         titel: 'Sprache rezeptiv und expressiv',
+        id: 2,
+        active: false,
         Fragen:[
             {
                 id: 0,
@@ -145,6 +151,8 @@ const Fragen = [
     
     {   
         titel: 'Kognitive Entwicklung',
+        id: 3,
+        active: false,
         Fragen:[
             {
                 id: 0,
@@ -193,6 +201,8 @@ const Fragen = [
     
     {   
         titel: 'Soziale Entwicklung',
+        id: 4,
+        active: false,
         Fragen:[
             {
                 id: 0,
@@ -241,6 +251,8 @@ const Fragen = [
     
     {   
         titel: 'Emotionale Entwicklung',
+        id: 5,
+        active: false,
         Fragen:[
             {
                 id: 0,
@@ -288,4 +300,4 @@ const Fragen = [
     },
 ]
 
-export default Fragen;
+export default Fragen

@@ -4,26 +4,34 @@ import { Button, FormGroup, FormControl, ControlLabel, DropdownButton, MenuItem
 import { Link } from 'react-router-dom';
 import '../styles/login.css';
 
-const loginComponent = ({ userData, onClickButton, currentUser }) => {
+class loginComponent extends React.Component {
+  constructor(props){
+    super(props)
+    this.onClickUserButton = this.onClickUserButton.bind(this)
+    this.state = {
+      userMenuText: "Username"
+    }
+  }
+
+  onClickUserButton(id){
+    this.setState({ userMenuText: this.props.userData[id].Vorname})
+    this.props.onClickButton(id)
+  }
+
+  render(){
+    const { userData } = this.props
     return (
       <div className="Login">
         <form >
           <FormGroup bsSize="large">
-            <ControlLabel>Email</ControlLabel>
-            <FormControl
-              autoFocus
-              type="text"
-              value={currentUser.join("")}
-              placeholder="Email"
-            />
-            <DropdownButton bsSize="large" title="Username" id="bg-nested-dropdown">
-              <MenuItem eventKey="1" onClick={() => onClickButton(0)}>
+            <DropdownButton bsSize="large" title={this.state.userMenuText} id="bg-nested-dropdown">
+              <MenuItem eventKey="1" onClick={() => this.onClickUserButton(0)}>
                 {userData[0].Vorname}
               </MenuItem>
-              <MenuItem eventKey="2" onClick={() => onClickButton(1)}>
+              <MenuItem eventKey="2" onClick={() => this.onClickUserButton(1)}>
                 {userData[1].Vorname}
               </MenuItem>
-              <MenuItem eventKey="3" onClick={() => onClickButton(2)}>
+              <MenuItem eventKey="3" onClick={() => this.onClickUserButton(2)}>
                 {userData[2].Vorname}
               </MenuItem>
             </DropdownButton>
@@ -31,7 +39,7 @@ const loginComponent = ({ userData, onClickButton, currentUser }) => {
           <FormGroup controlId="password" bsSize="large">
             <ControlLabel>Password</ControlLabel>
             <FormControl
-              value="password"
+              defaultValue="password"
               type="password"
             />
           </FormGroup>
@@ -53,7 +61,7 @@ const loginComponent = ({ userData, onClickButton, currentUser }) => {
           </Link>
         </form>
       </div>
-    )
+    )}
 }
 
    //withRouter muss dazu aufgrund von Problemen mit ReactRouter und redux

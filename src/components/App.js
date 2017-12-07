@@ -5,8 +5,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 //Pages & Styles
 import '../styles/App.css';
 import Welcome from './welcome.js';
-import loginComponent from '../containers/login.js';
-import Kinder from '../containers/kinderauswahl.js';
+import loginComponent from '../containers/loginContainer.js';
+import Kinder from '../containers/kinderauswahlContainer.js';
 import Ebd from '../containers/ebdContainer.js';
 
 class App extends Component {

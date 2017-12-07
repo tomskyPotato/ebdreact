@@ -5,7 +5,7 @@ import '../styles/App.css';
 const Navi = ({ currentUser }) => {
   return(
     <div className="flex-item flex-item-top">
-        <Navbar inverse collapseOnSelect fluid="true">
+        <Navbar inverse collapseOnSelect >
         <Navbar.Header>
             <Navbar.Brand>
             <a href="">EBD</a>

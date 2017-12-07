@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-import { dropDownUser, kinderAuswahl } from '../actions'
-import ebd from '../components/ebd.js'
+import { fragenAuswahl } from '../actions'
+import ebd from '../components/ebdComponent.js'
 
 const findActiveUser = (storeState) => {
   if(storeState === null)
@@ -14,6 +14,7 @@ const findActiveUser = (storeState) => {
 }
 
 const findActiveUsersKind = (storeState) => {
+  console.log(storeState)
   if(storeState === null)
     return
   const name = storeState.map(item => 
@@ -24,13 +25,28 @@ const findActiveUsersKind = (storeState) => {
   return name
 }
 
+const findActiveFragen = (storeState) => {
+  console.log(storeState)
+  if(storeState === null)
+    return
+  const frageID = storeState.map(item => {
+    if(item.active === true){
+       return item.id 
+    }
+    return null
+  }).join("")
+  
+  return frageID
+}
+
 const mapStateToProps = (state) => ({
   currentUser: findActiveUser(state.reducerUser),
-  currentKind: findActiveUsersKind(state.reducerKinder)
+  currentKind: findActiveUsersKind(state.reducerKinder),
+  currentFragenID: findActiveFragen(state.reducerFragen)
 })
 
 const mapDispatchToProps = {
-  onClickButton: kinderAuswahl
+  onClickButton: fragenAuswahl
 }
 
 const ebdContainer = connect(

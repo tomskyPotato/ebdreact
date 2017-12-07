@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-import { dropDownUser, kinderAuswahl } from '../actions'
-import kinderComponent from '../components/kinderauswahl'
+import { kinderAuswahl } from '../actions'
+import kinderComponent from '../components/kinderauswahlComponent'
 
 const findActiveUser = (storeState) => {
   if(storeState === null)
@@ -23,8 +23,8 @@ const vergleicheKinderID = (arr, Kinder) => {
         kinderArray[i] = item
       }
     }
+    return null
   })
-  console.log(kinderArray)
   return kinderArray
 }
 

@@ -36,7 +36,7 @@ class Gallery extends Component {
           </thead>
           <tbody>
             {Fragen[bereichID].Fragen.map(function(keyName) { return (
-                <Zeile keyName={keyName.frage} />
+                <Zeile keyName={keyName.frage} key={keyName.frage.toString()}/>
                 );
               })
             }
