@@ -9,14 +9,13 @@ var divStyle = {
 
 const Ebd = ({ onClickButton, currentFragenID, currentUser, currentKind }) => (
   <div>
-    {/*// TODO: Name des Angemeldeten in die Navileiste*/}
     <Navi currentUser={ currentUser }/>
     <div style={divStyle}>
       { currentKind }
     </div>
     {/*// TODO: Informationen zum Kind*/}
     <NaviBereich 
-      onClick={() => onClickButton(currentFragenID)} 
+      onClick={onClickButton} 
       currentFragenID={currentFragenID} 
     />
     {/*// TODO: Home Button in die Navileiste. Home ist dann Kinderauswahlfenster*/}

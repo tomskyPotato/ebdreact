@@ -2,7 +2,7 @@ const Fragen = [
     {   
         titel: "Handlungs- und Bewegungssteuerung",
         id: 0,
-        active: true, //eine Frage muss initial true sein damit im ebdComponent etwas gezeigt werden kann
+        active: false, //eine Frage muss initial true sein damit im ebdComponent etwas gezeigt werden kann
         Fragen:[
             {
                 id: 0,
@@ -52,7 +52,7 @@ const Fragen = [
     {   
         titel: 'Fein- und Visuomotorik',
         id: 1,
-        active: false,
+        active: true,
         Fragen:[
             {
                 id: 0,

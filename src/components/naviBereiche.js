@@ -7,23 +7,19 @@ const divStyle = {
   outline: 'none',
 }
 
-const NavItemComp = ({eventKey, onClick, frage}) => (
-  <NavItem eventKey={eventKey} onClick={onClick}>{frage}</NavItem>  
-)
-
 const NaviBereich = ({ onClick, currentFragenID }) => (
   <div style={divStyle}> 
-    <Nav bsStyle="tabs" autoFocus="false" activeKey={parseInt(currentFragenID, 10)}>
+    <Nav bsStyle="tabs" autoFocus="false" activeKey={currentFragenID.toString()}> 
       {fragen.map(frag =>
-        <NavItemComp  
-          key={parseInt(frag.id, 10)} 
-          eventKey={parseInt(frag.titel, 10)} 
-          onClick={() => onClick(frag.id)} 
-          frage={frag.titel}
-        />
+        <NavItem
+          key={frag.id}
+          eventKey={frag.id.toString()}
+          onClick={() => onClick(frag.id)}
+          >{frag.titel}
+        </NavItem>
       )}
     </Nav>
-    <Tabelle activeKey={0}/>
+    <Tabelle activeKey={currentFragenID}/>
   </div>
 )
 
