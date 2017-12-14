@@ -14,7 +14,6 @@ const findActiveUser = (storeState) => {
 }
 
 const findActiveUsersKind = (storeState) => {
-  console.log(storeState)
   if(storeState === null)
     return
   const name = storeState.map(item => 
@@ -26,7 +25,6 @@ const findActiveUsersKind = (storeState) => {
 }
 
 const findActiveFragen = (storeState) => {
-  console.log(storeState)
   if(storeState === null)
     return
   const frageID = storeState.map(item => {

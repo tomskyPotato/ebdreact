@@ -1,6 +1,5 @@
 import React from 'react';
 import { Nav, NavItem } from 'react-bootstrap';
-import Fragen from '../data/bereiche.js';
 import Tabelle from './tabelle.js';
 import fragen from '../data/bereiche.js'
 
@@ -14,10 +13,11 @@ const NavItemComp = ({eventKey, onClick, frage}) => (
 
 const NaviBereich = ({ onClick, currentFragenID }) => (
   <div style={divStyle}> 
-    <Nav bsStyle="tabs" autoFocus="false" activeKey={parseInt(currentFragenID)}>
+    <Nav bsStyle="tabs" autoFocus="false" activeKey={parseInt(currentFragenID, 10)}>
       {fragen.map(frag =>
         <NavItemComp  
-          eventKey={frag.id} 
+          key={parseInt(frag.id, 10)} 
+          eventKey={parseInt(frag.titel, 10)} 
           onClick={() => onClick(frag.id)} 
           frage={frag.titel}
         />

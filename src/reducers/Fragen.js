@@ -5,7 +5,7 @@ const reducerFragen = (state = Fragen, action) => {
         case "FRAGEN_AUSWAHL":
             return state.map(frage =>
             (frage.id === action.id)
-                ? {...frage, active: !frage.active}
+                ? {...frage, active: true}
                 : {...frage, active: false}
             )
         default:

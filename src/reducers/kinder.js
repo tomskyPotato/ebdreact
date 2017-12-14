@@ -5,7 +5,7 @@ const reducerKinder = (state = kinder, action) => {
         case "KINDERAUSWAHL":
             return state.map(kind =>
             (kind.id === action.id)
-                ? {...kind, active: !kind.active}
+                ? {...kind, active: true}
                 : {...kind, active: false}
             )
         default:

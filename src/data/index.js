@@ -1,7 +1,7 @@
 export const user = [
     {
         "id": 0,
-        "active": false,
+        "active": true,
         "Vorname": "Thomas",
         "Nachname": "Lommel",
         "email": "thomas@ebd.de",
@@ -47,7 +47,7 @@ export const user = [
 export const kinder = [
     {
         "id": 0,
-        "active": false,
+        "active": true,
         "name": "Mathilda",
         "geschlecht": "w",
         "alter": 15

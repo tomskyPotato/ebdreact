@@ -5,7 +5,7 @@ const reducerUser = (state = user, action) => {
         case "DROP_DOWN_USER":
             return state.map(user =>
             (user.id === action.id)
-                ? {...user, active: !user.active}
+                ? {...user, active: true}
                 : {...user, active: false}
             )
         default:
