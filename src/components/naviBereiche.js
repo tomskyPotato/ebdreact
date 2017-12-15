@@ -19,6 +19,7 @@ const NaviBereich = ({ onClick, currentFragenID }) => (
         </NavItem>
       )}
     </Nav>
+    {document.activeElement.blur()/*set <body> as active Element */}
     <Tabelle activeKey={currentFragenID}/>
   </div>
 )

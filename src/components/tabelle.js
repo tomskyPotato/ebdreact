@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ButtonToolbar, ToggleButtonGroup, ToggleButton, Table } from 'react-bootstrap';
+import { ButtonToolbar, ToggleButtonGroup, ToggleButton, Table, Glyphicon } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 import Fragen from '../data/bereiche.js';
 
@@ -54,7 +54,7 @@ const Zeile = ({keyName}) => {
       <td><ButtonGroupTutEs /></td>
       <td>
         <Link key="0" to={{ pathname: `/`, }}>
-          <p>infosymbol</p>
+          <Glyphicon glyph="info-sign" />
         </Link>
       </td>
     </tr>
