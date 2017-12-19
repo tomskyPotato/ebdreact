@@ -2,7 +2,7 @@ const Fragen = [
     {   
         titel: "Handlungs- und Bewegungssteuerung",
         id: 0,
-        active: false, //eine Frage muss initial true sein damit im ebdComponent etwas gezeigt werden kann
+        active: true, //eine Frage muss initial true sein damit im ebdComponent etwas gezeigt werden kann
         Fragen:[
             {
                 id: 0,
@@ -10,6 +10,11 @@ const Fragen = [
                 beschreibung: 'Kann Kopf und Brust anheben',
                 frage: 'Frage 1 Handlungs- und Bewegungssteuerung',
                 uebung: 'Übung 1 Handlungs- und Bewegungssteuerung',
+                Ergebnis:[
+                    {
+                    value: 2 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
+                    }
+                ]
             },
             {
                 id: 1,
@@ -17,6 +22,11 @@ const Fragen = [
                 beschreibung: 'Liegt symmetrisch auf dem Rücken',
                 frage: 'Frage 2 Handlungs- und Bewegungssteuerung',
                 uebung: 'Übung 2 Handlungs- und Bewegungssteuerung',
+                Ergebnis:[
+                    {
+                    value: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
+                    }
+                ]
             },
             {
                 id: 2,
@@ -24,6 +34,11 @@ const Fragen = [
                 beschreibung: 'Kann die Beine strecken',
                 frage: 'Frage 3 Handlungs- und Bewegungssteuerung',
                 uebung: 'Übung 3 Handlungs- und Bewegungssteuerung',
+                Ergebnis:[
+                    {
+                    value: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
+                    }
+                ]
             },
             {
                 id: 3,
@@ -31,6 +46,11 @@ const Fragen = [
                 beschreibung: 'Kann Kopf und Brust anheben',
                 frage: 'Frage 4 Handlungs- und Bewegungssteuerung',
                 uebung: 'Übung 4 Handlungs- und Bewegungssteuerung',
+                Ergebnis:[
+                    {
+                    value: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
+                    }
+                ]
             },
             {
                 id: 4,
@@ -38,6 +58,11 @@ const Fragen = [
                 beschreibung: 'Liegt symmetrisch auf dem Rücken',
                 frage: 'Frage 5 Handlungs- und Bewegungssteuerung',
                 uebung: 'Übung 5 Handlungs- und Bewegungssteuerung',
+                Ergebnis:[
+                    {
+                    value: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
+                    }
+                ]
             },
             {
                 id: 5,
@@ -45,6 +70,11 @@ const Fragen = [
                 beschreibung: 'Kann die Beine strecken',
                 frage: 'Frage 6 Handlungs- und Bewegungssteuerung',
                 uebung: 'Übung 6 Handlungs- und Bewegungssteuerung',
+                Ergebnis:[
+                    {
+                    value: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
+                    }
+                ]
             },
         ]
     },
@@ -52,7 +82,7 @@ const Fragen = [
     {   
         titel: 'Fein- und Visuomotorik',
         id: 1,
-        active: true,
+        active: false,
         Fragen:[
             {
                 id: 0,

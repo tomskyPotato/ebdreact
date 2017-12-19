@@ -11,6 +11,15 @@ const reducerFragen = (state = Fragen, action) => {
                     return {...frage, active: false}
                 }
             })
+        case "ERGEBNIS":
+            return state.map(frage => {
+                if(frage.id === action.id){
+                    return {...frage, value: action.value}
+                }
+                else{
+                    return {...frage}
+                }
+            })
         default:
             return state
     }

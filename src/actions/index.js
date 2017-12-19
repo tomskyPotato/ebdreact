@@ -26,3 +26,11 @@ export const fragenAuswahl = (id) => {
         id
     }
 }
+
+export const ergebnis = (id, value) => {
+    return {
+        type: 'ERGEBNIS',
+        id, 
+        value
+    }
+}

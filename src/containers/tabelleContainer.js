@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-import { fragenAuswahl, ergebnis } from '../actions'
-import ebd from '../components/ebdComponent.js'
+import { fragenAuswahl } from '../actions'
+import tabelle from '../components/tabComponent.js'
 
 const findActiveObject = (storeState) => {
   let arrayTemp = null
@@ -24,13 +24,12 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = {
-  onClickButton: fragenAuswahl,
-  onClickErgebnis: ergebnis
+  onClickButton: fragenAuswahl
 }
 
-const ebdContainer = connect(
+const tabelleContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(ebd)
+)(tabelle)
 
-export default ebdContainer
+export default tabelleContainer

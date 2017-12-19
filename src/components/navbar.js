@@ -4,7 +4,7 @@ import { Navbar } from 'react-bootstrap';
 const Navi = ({ currentUser }) => {
   
   var stylesNavbar = {
-    "backgroundColor" : "#42f468",
+    "backgroundColor" : "#d5f6d5",
     "border"          : "none"
   };
   var stylesBrand = {
