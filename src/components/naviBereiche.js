@@ -20,6 +20,8 @@ const NaviBereich = ({ onClickButton, onClickErgebnis, currentFragen }) => (
       )}
     </Nav>
     {document.activeElement.blur()/*set <body> as active Element */}
+    
+    {console.log("er: " + currentFragen.Fragen[0].Ergebnis[0].value)}
     <Tabelle
       currentFragen={currentFragen}
       onClickErgebnis={onClickErgebnis} />

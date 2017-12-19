@@ -18,6 +18,8 @@ const Ebd = ({ onClickButton, onClickErgebnis, currentFragen, currentUser, curre
     </Panel>
     <br/>
     {/*// TODO: Informationen zum Kind*/}
+    
+    {console.log("e: " + currentFragen.Fragen[0].Ergebnis[0].value)}
     <NaviBereich 
       onClickButton={onClickButton} 
       onClickErgebnis={onClickErgebnis}

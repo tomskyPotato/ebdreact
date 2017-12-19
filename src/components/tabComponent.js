@@ -1,9 +1,9 @@
-import React from 'react';
-import { Button, Table, Glyphicon } from 'react-bootstrap';
+import React, {Component} from 'react'
+import { Button, Table, Glyphicon } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import Fragen from '../data/bereiche.js';
+import Fragen from '../data/bereiche.js'
 
-const Tabelle = ({ currentFragen, onClickErgebnis }) => (
+const Tabelle = ({ currentFragen, onClickErgebnis, tutEs }) => (
   <Table striped bordered condensed hover autoFocus>
     <thead>
         <tr>
@@ -14,13 +14,18 @@ const Tabelle = ({ currentFragen, onClickErgebnis }) => (
     </thead>
     <tbody>
       {
-        Fragen[currentFragen.id].Fragen.map(function(item) { return (
+        Fragen[currentFragen.id].Fragen.map(function(item) { 
+          {
+            console.log("ergeb: " + item.Ergebnis[0].value)
+          }
+          return (
           <Zeile 
             frage={item.frage} 
             id={item.id} 
             key={item.frage.toString()} 
             onClickErgebnis={onClickErgebnis}
-            ergebnis={item.Ergebnis}/>
+            ergebnis={item.Ergebnis[0].value}
+            />
           );
         })
       }
@@ -28,22 +33,43 @@ const Tabelle = ({ currentFragen, onClickErgebnis }) => (
   </Table>
 )
 
-const Zeile = ({id, frage, onClickErgebnis}) =>{
- const aaa = true 
+class Zeile extends Component {
+
+  render(){
+  const tutEs = [
+    {   
+        text: "Tut es",
+        value: 0
+    },
+    {
+        text: "Tut es nicht",
+        value: 1
+    },
+    {
+        text: "Weiss nicht",
+        value: 2
+    }
+  ]
+  const{id, frage, ergebnis, onClickErgebnis} = this.props
+
   return ( 
       <tr>
+        {
+          console.log("ergebnis: " + ergebnis)
+        }
       <td key={id}>{frage}</td>
       <td>
-      {/*<td><ButtonGroupTutEs onClickErgebnis={onClickErgebnis} id={id}/></td>*/}
-        <Button onClick={() => onClickErgebnis(id, 0)} active>
-          Tut es
-        </Button>
-        <Button onClick={() => onClickErgebnis(id, 1)}>
-          Tut es nicht
-        </Button>
-        <Button onClick={() => onClickErgebnis(id, 2)}>
-          Weiss nicht
-        </Button>
+        {tutEs.map(item => 
+         (item.value === ergebnis)
+          ?
+            <Button key={item.text} onClick={() => onClickErgebnis(id, item.value)} active>
+              {item.text}
+            </Button>
+          :
+            <Button key={item.text} onClick={() => onClickErgebnis(id, item.value)} >
+              {item.text}
+            </Button>
+        )}
       </td>
       <td>
         <Link key="0" to={{ pathname: `/`, }}>
@@ -52,6 +78,7 @@ const Zeile = ({id, frage, onClickErgebnis}) =>{
       </td>
     </tr>
   )
+}
 }
 
 export default Tabelle
