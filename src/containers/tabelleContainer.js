@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import { fragenAuswahl } from '../actions'
-import Tabelle from '../components/tabComponent.js'
+import tabelle from '../components/tabComponent.js'
 
 const findActiveObject = (storeState) => {
   let arrayTemp = null
@@ -30,6 +30,6 @@ const mapDispatchToProps = {
 const tabelleContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(Tabelle)
+)(tabelle)
 
 export default tabelleContainer

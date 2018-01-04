@@ -27,10 +27,9 @@ export const fragenAuswahl = (id) => {
     }
 }
 
-export const ergebnis = (entwicklungsBereichID, id, value) => {
+export const ergebnis = (id, value) => {
     return {
         type: 'ERGEBNIS',
-        entwicklungsBereichID,
         id, 
         value
     }

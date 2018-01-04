@@ -3,8 +3,7 @@ import { Button, Table, Glyphicon } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import Fragen from '../data/bereiche.js'
 
-
-const Tabelle = ({ currentFragen, onClickErgebnis }) => (
+const Tabelle = ({ currentFragen, onClickErgebnis, tutEs }) => (
   <Table striped bordered condensed hover autoFocus>
     <thead>
         <tr>
@@ -14,20 +13,18 @@ const Tabelle = ({ currentFragen, onClickErgebnis }) => (
         </tr>
     </thead>
     <tbody>
-
       {
         Fragen[currentFragen.id].Fragen.map(function(item) { 
           {
-            console.log("ergeb: " + item.Ergebnis)
+            console.log("ergeb: " + item.Ergebnis[0].value)
           }
           return (
           <Zeile 
             frage={item.frage} 
-            entwicklungsBereichID={currentFragen.id} 
-            id={item.id}
+            id={item.id} 
             key={item.frage.toString()} 
             onClickErgebnis={onClickErgebnis}
-            ergebnis={item.Ergebnis}
+            ergebnis={item.Ergebnis[0].value}
             />
           );
         })
@@ -53,7 +50,7 @@ class Zeile extends Component {
         value: 2
     }
   ]
-  const{ id, entwicklungsBereichID, frage, ergebnis, onClickErgebnis} = this.props
+  const{id, frage, ergebnis, onClickErgebnis} = this.props
 
   return ( 
       <tr>
@@ -65,11 +62,11 @@ class Zeile extends Component {
         {tutEs.map(item => 
          (item.value === ergebnis)
           ?
-            <Button key={item.text} onClick={() => onClickErgebnis(entwicklungsBereichID, id, item.value)} active>
+            <Button key={item.text} onClick={() => onClickErgebnis(id, item.value)} active>
               {item.text}
             </Button>
           :
-            <Button key={item.text} onClick={() => onClickErgebnis(entwicklungsBereichID, id, item.value)} >
+            <Button key={item.text} onClick={() => onClickErgebnis(id, item.value)} >
               {item.text}
             </Button>
         )}
