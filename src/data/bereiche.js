@@ -66,6 +66,7 @@ const Fragen = [
                 beschreibung: 'Kann Kopf und Brust anheben',
                 frage: 'Frage 1 Fein- und Visuomotorik',
                 uebung: 'Übung 1 Fein- und Visuomotorik',
+                Ergebnis: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
             },
             {
                 id: 1,
@@ -73,6 +74,7 @@ const Fragen = [
                 beschreibung: 'Liegt symmetrisch auf dem Rücken',
                 frage: 'Frage 2 Fein- und Visuomotorik',
                 uebung: 'Übung 2 Fein- und Visuomotorik',
+                Ergebnis: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
             },
             {
                 id: 2,
@@ -80,6 +82,7 @@ const Fragen = [
                 beschreibung: 'Kann die Beine strecken',
                 frage: 'Frage 3 Fein- und Visuomotorik',
                 uebung: 'Übung 3 Fein- und Visuomotorik',
+                Ergebnis: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
             },
             {
                 id: 3,
@@ -87,6 +90,7 @@ const Fragen = [
                 beschreibung: 'Kann Kopf und Brust anheben',
                 frage: 'Frage 4 Fein- und Visuomotorik',
                 uebung: 'Übung 4 Fein- und Visuomotorik',
+                Ergebnis: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
             },
             {
                 id: 4,
@@ -94,6 +98,7 @@ const Fragen = [
                 beschreibung: 'Liegt symmetrisch auf dem Rücken',
                 frage: 'Frage 5 Fein- und Visuomotorik',
                 uebung: 'Übung 5 Fein- und Visuomotorik',
+                Ergebnis: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
             },
             {
                 id: 5,
@@ -101,6 +106,7 @@ const Fragen = [
                 beschreibung: 'Kann die Beine strecken',
                 frage: 'Frage 6 Fein- und Visuomotorik',
                 uebung: 'Übung 6 Fein- und Visuomotorik',
+                Ergebnis: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
             },
         ]
     },
@@ -116,6 +122,7 @@ const Fragen = [
                 beschreibung: 'Kann Kopf und Brust anheben',
                 frage: 'Frage 1 Sprache rezeptiv und expressiv',
                 uebung: 'Übung 1 Sprache rezeptiv und expressiv',
+                Ergebnis: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
             },
             {
                 id: 1,
@@ -123,6 +130,7 @@ const Fragen = [
                 beschreibung: 'Liegt symmetrisch auf dem Rücken',
                 frage: 'Frage 2 Sprache rezeptiv und expressiv',
                 uebung: 'Übung 2 Sprache rezeptiv und expressiv',
+                Ergebnis: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
             },
             {
                 id: 2,
@@ -130,6 +138,7 @@ const Fragen = [
                 beschreibung: 'Kann die Beine strecken',
                 frage: 'Frage 3 Sprache rezeptiv und expressiv',
                 uebung: 'Übung 3 Sprache rezeptiv und expressiv',
+                Ergebnis: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
             },
             {
                 id: 3,
@@ -137,6 +146,7 @@ const Fragen = [
                 beschreibung: 'Kann Kopf und Brust anheben',
                 frage: 'Frage 4 Sprache rezeptiv und expressiv',
                 uebung: 'Übung 4 Sprache rezeptiv und expressiv',
+                Ergebnis: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
             },
             {
                 id: 4,
@@ -144,6 +154,7 @@ const Fragen = [
                 beschreibung: 'Liegt symmetrisch auf dem Rücken',
                 frage: 'Frage 5 Sprache rezeptiv und expressiv',
                 uebung: 'Übung 5 Sprache rezeptiv und expressiv',
+                Ergebnis: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
             },
             {
                 id: 5,
@@ -151,6 +162,7 @@ const Fragen = [
                 beschreibung: 'Kann die Beine strecken',
                 frage: 'Frage 6 Sprache rezeptiv und expressiv',
                 uebung: 'Übung 6 Sprache rezeptiv und expressiv',
+                Ergebnis: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
             },
         ]
     },
@@ -166,6 +178,7 @@ const Fragen = [
                 beschreibung: 'Kann Kopf und Brust anheben',
                 frage: 'Frage 1 Kognitive Entwicklung',
                 uebung: 'Übung 1 Kognitive Entwicklung',
+                Ergebnis: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
             },
             {
                 id: 1,
@@ -173,6 +186,7 @@ const Fragen = [
                 beschreibung: 'Liegt symmetrisch auf dem Rücken',
                 frage: 'Frage 2 Kognitive Entwicklung',
                 uebung: 'Übung 2 Kognitive Entwicklung',
+                Ergebnis: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
             },
             {
                 id: 2,
@@ -180,6 +194,7 @@ const Fragen = [
                 beschreibung: 'Kann die Beine strecken',
                 frage: 'Frage 3 Kognitive Entwicklung',
                 uebung: 'Übung 3 Kognitive Entwicklung',
+                Ergebnis: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
             },
             {
                 id: 3,
@@ -187,6 +202,7 @@ const Fragen = [
                 beschreibung: 'Kann Kopf und Brust anheben',
                 frage: 'Frage 4 Kognitive Entwicklung',
                 uebung: 'Übung 4 Kognitive Entwicklung',
+                Ergebnis: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
             },
             {
                 id: 4,
@@ -194,6 +210,7 @@ const Fragen = [
                 beschreibung: 'Liegt symmetrisch auf dem Rücken',
                 frage: 'Frage 5 Kognitive Entwicklung',
                 uebung: 'Übung 5 Kognitive Entwicklung',
+                Ergebnis: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
             },
             {
                 id: 5,
@@ -201,6 +218,7 @@ const Fragen = [
                 beschreibung: 'Kann die Beine strecken',
                 frage: 'Frage 6 Kognitive Entwicklung',
                 uebung: 'Übung 6 Kognitive Entwicklung',
+                Ergebnis: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
             },
         ]
     },
@@ -216,6 +234,7 @@ const Fragen = [
                 beschreibung: 'Kann Kopf und Brust anheben',
                 frage: 'Frage 1 Soziale Entwicklung',
                 uebung: 'Übung 1 Soziale Entwicklung',
+                Ergebnis: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
             },
             {
                 id: 1,
@@ -223,6 +242,7 @@ const Fragen = [
                 beschreibung: 'Liegt symmetrisch auf dem Rücken',
                 frage: 'Frage 2 Soziale Entwicklung',
                 uebung: 'Übung 2 Soziale Entwicklung',
+                Ergebnis: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
             },
             {
                 id: 2,
@@ -230,6 +250,7 @@ const Fragen = [
                 beschreibung: 'Kann die Beine strecken',
                 frage: 'Frage 3 Soziale Entwicklung',
                 uebung: 'Übung 3 Soziale Entwicklung',
+                Ergebnis: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
             },
             {
                 id: 3,
@@ -237,6 +258,7 @@ const Fragen = [
                 beschreibung: 'Kann Kopf und Brust anheben',
                 frage: 'Frage 4 Soziale Entwicklung',
                 uebung: 'Übung 4 Soziale Entwicklung',
+                Ergebnis: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
             },
             {
                 id: 4,
@@ -244,6 +266,7 @@ const Fragen = [
                 beschreibung: 'Liegt symmetrisch auf dem Rücken',
                 frage: 'Frage 5 Soziale Entwicklung',
                 uebung: 'Übung 5 Soziale Entwicklung',
+                Ergebnis: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
             },
             {
                 id: 5,
@@ -251,6 +274,7 @@ const Fragen = [
                 beschreibung: 'Kann die Beine strecken',
                 frage: 'Frage 6 Soziale Entwicklung',
                 uebung: 'Übung 6 Soziale Entwicklung',
+                Ergebnis: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
             },
         ]
     },
@@ -266,6 +290,7 @@ const Fragen = [
                 beschreibung: 'Kann Kopf und Brust anheben',
                 frage: 'Frage 1 Emotionale Entwicklung',
                 uebung: 'Übung 1 Emotionale Entwicklung',
+                Ergebnis: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
             },
             {
                 id: 1,
@@ -273,6 +298,7 @@ const Fragen = [
                 beschreibung: 'Liegt symmetrisch auf dem Rücken',
                 frage: 'Frage 2 Emotionale Entwicklung',
                 uebung: 'Übung 2 Emotionale Entwicklung',
+                Ergebnis: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
             },
             {
                 id: 2,
@@ -280,6 +306,7 @@ const Fragen = [
                 beschreibung: 'Kann die Beine strecken',
                 frage: 'Frage 3 Emotionale Entwicklung',
                 uebung: 'Übung 3 Emotionale Entwicklung',
+                Ergebnis: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
             },
             {
                 id: 3,
@@ -287,6 +314,7 @@ const Fragen = [
                 beschreibung: 'Kann Kopf und Brust anheben',
                 frage: 'Frage 4 Emotionale Entwicklung',
                 uebung: 'Übung 4 Emotionale Entwicklung',
+                Ergebnis: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
             },
             {
                 id: 4,
@@ -294,6 +322,7 @@ const Fragen = [
                 beschreibung: 'Liegt symmetrisch auf dem Rücken',
                 frage: 'Frage 5 Emotionale Entwicklung',
                 uebung: 'Übung 5 Emotionale Entwicklung',
+                Ergebnis: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
             },
             {
                 id: 5,
@@ -301,6 +330,7 @@ const Fragen = [
                 beschreibung: 'Kann die Beine strecken',
                 frage: 'Frage 6 Emotionale Entwicklung',
                 uebung: 'Übung 6 Emotionale Entwicklung',
+                Ergebnis: 0 //0: Tut es, 1: Tut es nicht, 2: Weiss nicht
             },
         ]
     },

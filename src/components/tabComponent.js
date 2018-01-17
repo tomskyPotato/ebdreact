@@ -16,10 +16,7 @@ const Tabelle = ({ currentFragen, onClickErgebnis }) => (
     <tbody>
 
       {
-        Fragen[currentFragen.id].Fragen.map(function(item) { 
-          {
-            //console.log("ergeb: " + item.Ergebnis)
-          }
+        currentFragen.Fragen.map(function(item) { 
           return (
           <Zeile 
             frage={item.frage} 
@@ -55,8 +52,9 @@ class Zeile extends Component {
   ]
   const{ id, entwicklungsBereichID, frage, ergebnis, onClickErgebnis} = this.props
 
-  return ( 
+  return (
       <tr>
+      {console.log( "EntwicklungBereichID: ", entwicklungsBereichID, " id: ", id, " ergebnis: ", ergebnis)}
       <td key={id}>{frage}</td>
       <td>
         {tutEs.map(item => 
@@ -64,9 +62,7 @@ class Zeile extends Component {
           ?
             <Button key={item.text} onClick={() => onClickErgebnis(entwicklungsBereichID, id, item.value)} active>
               {item.text}
-        {
-          console.log( id, entwicklungsBereichID, item.value)
-        }
+              {console.log("item.value: ", item.value)}
             </Button>
           :
             <Button key={item.text} onClick={() => onClickErgebnis(entwicklungsBereichID, id, item.value)} >
