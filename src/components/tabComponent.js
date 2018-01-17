@@ -3,7 +3,8 @@ import { Button, Table, Glyphicon } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import Fragen from '../data/bereiche.js'
 
-const Tabelle = ({ currentFragen, onClickErgebnis, tutEs }) => (
+
+const Tabelle = ({ currentFragen, onClickErgebnis }) => (
   <Table striped bordered condensed hover autoFocus>
     <thead>
         <tr>
@@ -13,18 +14,20 @@ const Tabelle = ({ currentFragen, onClickErgebnis, tutEs }) => (
         </tr>
     </thead>
     <tbody>
+
       {
         Fragen[currentFragen.id].Fragen.map(function(item) { 
           {
-            console.log("ergeb: " + item.Ergebnis[0].value)
+            //console.log("ergeb: " + item.Ergebnis)
           }
           return (
           <Zeile 
             frage={item.frage} 
-            id={item.id} 
+            entwicklungsBereichID={currentFragen.id} 
+            id={item.id}
             key={item.frage.toString()} 
             onClickErgebnis={onClickErgebnis}
-            ergebnis={item.Ergebnis[0].value}
+            ergebnis={item.Ergebnis}
             />
           );
         })
@@ -50,23 +53,23 @@ class Zeile extends Component {
         value: 2
     }
   ]
-  const{id, frage, ergebnis, onClickErgebnis} = this.props
+  const{ id, entwicklungsBereichID, frage, ergebnis, onClickErgebnis} = this.props
 
   return ( 
       <tr>
-        {
-          console.log("ergebnis: " + ergebnis)
-        }
       <td key={id}>{frage}</td>
       <td>
         {tutEs.map(item => 
          (item.value === ergebnis)
           ?
-            <Button key={item.text} onClick={() => onClickErgebnis(id, item.value)} active>
+            <Button key={item.text} onClick={() => onClickErgebnis(entwicklungsBereichID, id, item.value)} active>
               {item.text}
+        {
+          console.log( id, entwicklungsBereichID, item.value)
+        }
             </Button>
           :
-            <Button key={item.text} onClick={() => onClickErgebnis(id, item.value)} >
+            <Button key={item.text} onClick={() => onClickErgebnis(entwicklungsBereichID, id, item.value)} >
               {item.text}
             </Button>
         )}
