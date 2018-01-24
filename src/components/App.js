@@ -7,7 +7,8 @@ import '../styles/App.css';
 import Welcome from './welcome.js';
 import loginComponent from '../containers/loginContainer.js';
 import Kinder from '../containers/kinderauswahlContainer.js';
-import Ebd from '../containers/ebdContainer.js';
+import Ebd from '../containers/ebdContainer.js'
+
 
 class App extends Component {
   render() {

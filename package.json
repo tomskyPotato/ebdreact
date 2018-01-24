@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "dependencies": {
     "connected-react-router": "^4.3.0",
+    "firebase": "^4.9.0",
     "flexbox-react": "^4.4.0",
     "history": "^4.7.2",
     "muicss": "^0.9.28",
