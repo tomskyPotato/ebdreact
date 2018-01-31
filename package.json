@@ -7,6 +7,8 @@
     "flexbox-react": "^4.4.0",
     "history": "^4.7.2",
     "muicss": "^0.9.28",
+    "mysql": "^2.15.0",
+    "node-fetch": "^1.7.3",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-bootstrap": "^0.31.3",

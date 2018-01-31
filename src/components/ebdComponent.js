@@ -1,6 +1,6 @@
 import React from 'react'
 import Navi from '../components/navbar.js'
-import ButtonArea from './buttonarea.js'
+import ButtonArea from './buttonarea.component.js'
 import NaviBereich from '../components/naviBereiche.js'
 import { Panel } from 'react-bootstrap'
 
