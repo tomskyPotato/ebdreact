@@ -1,5 +1,5 @@
 {
-  "name": "app",
+  "name": "ebdapp",
   "version": "0.1.0",
   "dependencies": {
     "connected-react-router": "^4.3.0",
@@ -25,7 +25,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "server": "nodemon server.js"
   },
-  "proxy": "http://localhost:5000/"
+  "proxy": "http://localhost:5000/",
+  "main": "index.js",
+  "repository": "https://github.com/tomskyPotato/ebdreact.git",
+  "author": "tomsky <tomsky@posteo.de>",
+  "license": "MIT"
 }
