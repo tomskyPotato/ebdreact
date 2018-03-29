@@ -8,6 +8,8 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 //FILES, Components, Container
 import App from './components/App'
 import mainReducer from './reducers'
+//Server connection
+import registerServiceWorker from './registerServiceWorker'
 
 const store = createStore(mainReducer, composeWithDevTools())
 
@@ -17,3 +19,5 @@ render(
   </Provider>,
   document.getElementById('root')
 )
+
+registerServiceWorker()

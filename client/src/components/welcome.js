@@ -1,12 +1,15 @@
-import React from 'react';
+import React,{Component} from 'react';
 import { Button, Jumbotron } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+
+import CallApi from './callApi'
 
 const divStyle = {
   textAlign: 'center',
 }
 
-let Welcome = ({ text, onClick }) => {
+let Welcome = ({ text, onClick, express }) => {
+  
   return(
     <div style={divStyle}>
       <Jumbotron style={divStyle}>
@@ -24,9 +27,9 @@ let Welcome = ({ text, onClick }) => {
           </p>
         </Link>
       </Jumbotron>
+      <CallApi/>
     </div>
   )
-
 }
 
 export default Welcome
