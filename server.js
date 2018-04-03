@@ -7,10 +7,12 @@ const port = process.env.PORT || 5000;
 
 app.get('/api/hello', (req, res) => {
   res.send({ express: 'Hello From Express' });
+  next()
 });
 
 app.get('/', (req, res) => {
   res.json({ text: "Hello From Server" });
+  next()
 });
 
 app.use('/api/time', time)

@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import { Button, Table, Glyphicon } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import Fragen from '../data/bereiche.js'
 
 
 const Tabelle = ({ currentFragen, onClickErgebnis }) => (
