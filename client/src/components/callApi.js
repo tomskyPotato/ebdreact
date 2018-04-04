@@ -1,21 +1,24 @@
 //react
 import React, { Component } from 'react'
+var server = 'http://localhost:5000'
 
 class CallApi extends Component{
     state = {
       response: "Start Text"
     }
 
+    refreshState(data){
+      this.setState({
+        response: data.text
+      })
+    }
+
     callApi = async () => {
-      return fetch('/api/time')
-        //.then((res) => res.json())
-        .then((res) => {
-          console.log('res: ', res)
-        })
-        .then((res) => {
-          this.setState({
-            response: res.text
-          })
+      return fetch(server + '/api/time')
+        .then((res) => res.json())
+        .then((data) => {
+          console.log('res: ', data.text)
+          this.refreshState(data)
         })
     }
 
