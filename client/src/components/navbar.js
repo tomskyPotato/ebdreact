@@ -20,7 +20,7 @@ const Navi = ({ currentUser }) => {
         <Navbar inverse collapseOnSelect style={stylesNavbar}>
         <Navbar.Header >
             <Navbar.Brand pullLeft>
-            <a href="" style={stylesBrand}>EBD</a>
+            <a href="/" style={stylesBrand}>EBD</a>
             </Navbar.Brand>
             <Navbar.Toggle />
         </Navbar.Header>
