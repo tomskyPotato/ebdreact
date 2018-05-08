@@ -8,7 +8,7 @@ var requestTime = function (req, res, next) {
 }
 
 router.use(requestTime)
-
+// '/' ist die Ebene /api/time
 router.get('/', function (req, res) {
     res.send({ text: req.requestTime })
 })
