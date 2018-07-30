@@ -3,7 +3,6 @@ var router = express.Router()
 
 var requestTime = function (req, res, next) {
     req.requestTime = Date()
-    console.log('Time: ', req.requestTime)
     next()
 }
 
