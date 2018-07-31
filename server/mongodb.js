@@ -4,13 +4,13 @@ const mongoose = require('mongoose');
 var names
 
 var mongo = function(){
-    const URI = "mongodb://localhost:27017"
+    const URI = "mongodb://user3:pin1233@ds125938.mlab.com:25938/reactjs"
+    
+    mongoose.connect(URI, { useNewUrlParser: true });
 
-    mongoose.connect(URI);
+    const Cat = mongoose.model('Dog', { name: String });
 
-    const Cat = mongoose.model('Cat', { name: String });
-
-    const kitty = new Cat({ name: 'Zildjian' });
+    const kitty = new Cat({ name: 'Zilde' });
     kitty.save().then(() => console.log('meow'));
 
 }
@@ -20,7 +20,7 @@ var requestTime = function (req, res, next) {
     next()
 }
 
-//router.use(mongo)
+router.use(mongo)
 
 router.use(requestTime)
     // '/' ist die Ebene /api/time
